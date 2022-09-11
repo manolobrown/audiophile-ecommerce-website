@@ -1,9 +1,10 @@
 <script setup></script>
 <template>
-  <div class="navbar-wrapper bg-black">
+  <div class="navbar-wrapper bg-[#121212]">
     <div
-      class="navbar container flex flex-row justify-between border-b-[1px] border-[#979797] pt-[32px] pb-[36px]"
+      class="navbar container flex flex-row justify-between border-b-[1px] border-[#979797] pt-[32px] pb-[32px]"
     >
+      <NavbarMobileButton class="lg:hidden" />
       <div class="navbar__logo">
         <svg width="143" height="25" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -13,7 +14,7 @@
           />
         </svg>
       </div>
-      <ul class="navbar__nav flex flex-row gap-[34px]">
+      <ul class="hidden navbar__nav lg:flex flex-row gap-[34px]">
         <li><a href="#">Home</a></li>
         <li><a href="">Headphones</a></li>
         <li><a href="">Speakers</a></li>
@@ -30,6 +31,7 @@
       </div>
     </div>
   </div>
+  <NavbarMobileMenu />
 </template>
 <style>
 .navbar,
