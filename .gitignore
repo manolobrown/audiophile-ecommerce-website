@@ -1,0 +1,14 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+*.sketch
+*.fig
+.DS_Store
+.prettierignore
+*.xd
+frontend_mentor_assets
