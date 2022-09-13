@@ -1,10 +1,16 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+let isActive = ref(false);
+const toggleMobileMenu = () => {
+  isActive.value = !isActive.value;
+};
+</script>
 <template>
   <div class="navbar-wrapper bg-[#121212]">
     <div
       class="navbar container flex flex-row justify-between border-b-[1px] border-[#979797] pt-[32px] pb-[32px]"
     >
-      <NavbarMobileButton class="lg:hidden" />
+      <NavbarMobileButton @click="toggleMobileMenu()" class="lg:hidden" />
       <div class="navbar__logo">
         <svg width="143" height="25" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -31,7 +37,7 @@
       </div>
     </div>
   </div>
-  <NavbarMobileMenu />
+  <NavbarMobileMenu :dialog-active="isActive" />
 </template>
 <style>
 .navbar,
