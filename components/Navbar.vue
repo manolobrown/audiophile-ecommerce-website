@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import NavbarMobileButton from "./navbar/NavbarMobileButton.vue";
+import NavbarMobileMenu from "./navbar/NavbarMobileMenu.vue";
 let isActive = ref(false);
 const toggleMobileMenu = () => {
   isActive.value = !isActive.value;

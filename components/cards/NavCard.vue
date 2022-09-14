@@ -1,4 +1,5 @@
 <script setup>
+import ButtonThree from "../buttons/ButtonThree.vue";
 defineProps({
   imagePath: String,
   heading: String,
@@ -12,11 +13,9 @@ defineProps({
       class="mx-auto absolute -top-[20%] left-1/2 -translate-x-1/2 max-h-[104px]"
       :src="imagePath"
     />
-    <h2 class="mt-5 mb-4">
-      {{ heading }}
+    <h2 class="mt-5 mb-4 uppercase text-[15px]">
+      <strong>{{ heading }}</strong>
     </h2>
-    <span>
-      <a href="{{ctaUrl}}">{{ ctaText }} <span>></span></a>
-    </span>
+    <ButtonThree :cta-url="ctaUrl" :cta-text="ctaText" />
   </div>
 </template>
