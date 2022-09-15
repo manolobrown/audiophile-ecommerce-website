@@ -1,3 +1,7 @@
+<script setup>
+import CategoryNav from "~~/components/navs/CategoryNav.vue";
+</script>
 <template>
-  <h1>Index Page</h1>
+  <Hero />
+  <CategoryNav class="mb-[120px]" />
 </template>
