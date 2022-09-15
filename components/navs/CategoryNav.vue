@@ -36,7 +36,7 @@ const navCards = [
 </script>
 <template>
   <div
-    class="container bg-white flex flex-col gap-y-16 pt-[70px] rounded-b-lg p-9"
+    class="container bg-white flex flex-col gap-y-16 pt-[70px] rounded-b-lg pb-9"
   >
     <NavCard
       v-for="card in navCards"
