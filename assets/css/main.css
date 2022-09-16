@@ -8,3 +8,18 @@
     font-family: "Manrope", sans-serif;
   }
 }
+
+@layer components {
+  .btn {
+    @apply text-[13px] flex items-center justify-center uppercase max-w-[160px] h-[48px] transition-colors w-full;
+  }
+  .btn--primary {
+    @apply text-white bg-[#D87D4A] hover:bg-[#FBAF85];
+  }
+  .btn--secondary {
+    @apply text-white bg-black hover:bg-[#4C4C4C];
+  }
+  .btn--outline {
+    @apply text-black bg-transparent border border-black hover:bg-black hover:text-white;
+  }
+}

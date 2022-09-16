@@ -22,6 +22,10 @@ const buttonUrl = "#";
       Experience natural, lifelike audio and exceptional build quality made for
       the passionate music enthusiast.
     </p>
-    <ButtonOne :button-text="buttonText" :button-url="buttonUrl" />
+    <ButtonOne
+      button-text="See Product"
+      button-url="#"
+      class="btn--primary mx-auto"
+    />
   </div>
 </template>

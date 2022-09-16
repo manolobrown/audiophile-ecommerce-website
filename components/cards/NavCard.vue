@@ -1,5 +1,4 @@
 <script setup>
-import ButtonThree from "../buttons/ButtonThree.vue";
 defineProps({
   imagePath: String,
   heading: String,
@@ -16,6 +15,6 @@ defineProps({
     <h2 class="mt-5 mb-4 uppercase text-[15px]">
       <strong>{{ heading }}</strong>
     </h2>
-    <ButtonThree :cta-url="ctaUrl" :cta-text="ctaText" />
+    <ButtonsButtonTwo :cta-url="ctaUrl" :cta-text="ctaText" />
   </div>
 </template>
