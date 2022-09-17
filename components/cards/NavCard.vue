@@ -7,7 +7,9 @@ defineProps({
 });
 </script>
 <template>
-  <div class="card bg-[#F1F1F1] rounded-lg text-center p-5 pt-[60px] relative">
+  <div
+    class="card bg-[#F1F1F1] rounded-lg text-center p-5 pt-[60px] relative flex-grow"
+  >
     <img
       class="mx-auto absolute -top-[20%] left-1/2 -translate-x-1/2 max-h-[104px]"
       :src="imagePath"

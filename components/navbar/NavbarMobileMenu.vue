@@ -12,7 +12,7 @@ defineProps({
     class="open:bg-black/40 h-screen w-full p-0 z-[1]"
     :open="dialogActive"
   >
-    <CategoryNav />
+    <CategoryNav class="sm:pb-[67px] sm:pt-[87px]" />
   </dialog>
 </template>
 <style></style>

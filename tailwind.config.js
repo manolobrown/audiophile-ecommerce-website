@@ -11,10 +11,14 @@ module.exports = {
     container: {
       center: true,
       screens: {
+        md: "768px",
         xl: "1110px",
         "2xl": "1110px",
       },
-      padding: "24px",
+      padding: {
+        DEFAULT: "1.5rem",
+        md: "2.5rem",
+      },
     },
   },
   plugins: [],
