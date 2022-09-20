@@ -19,12 +19,14 @@ const footerLinks = [
 ];
 </script>
 <template>
-  <div class="bg-black text-center pt-[52px] pb-[38px] md:text-left">
+  <div
+    class="bg-black text-center pt-[52px] pb-[38px] md:text-left md:pb-[46px]"
+  >
     <div
       class="container before:block before:absolute before:bg-[#D87D4A] before:h-1 before:top-[-52px] before:w-[101px] before:left-1/2 before:-translate-x-1/2 relative md:before:left-[2.5rem] md:before:translate-x-0"
     >
       <svg
-        class="mx-auto mb-[48px] md:ml-0"
+        class="mx-auto mb-[48px] md:ml-0 md:mb-8"
         width="143"
         height="25"
         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +38,7 @@ const footerLinks = [
         />
       </svg>
       <ul
-        class="flex flex-col items-center justify-center gap-y-4 mb-[48px] md:flex-row md:gap-x-[34px] md:justify-start"
+        class="flex flex-col items-center justify-center gap-y-4 mb-[48px] md:flex-row md:gap-x-[34px] md:justify-start md:mb-8"
       >
         <li v-for="footerLink in footerLinks">
           <a
@@ -46,7 +48,9 @@ const footerLinks = [
           >
         </li>
       </ul>
-      <p class="text-white text-[15px] leading-[25px] opacity-50 mb-[48px]">
+      <p
+        class="text-white text-[15px] leading-[25px] opacity-50 mb-[48px] md:mb-20"
+      >
         Audiophile is an all in one stop to fulfill your audio needs. We're a
         small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
@@ -97,7 +101,7 @@ const footerLinks = [
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 a:hover svg path {
   fill: #d87d4a;
 }
