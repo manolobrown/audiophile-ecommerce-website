@@ -7,7 +7,7 @@ import ButtonOne from "./buttons/ButtonOne.vue";
       <picture>
         <source
           srcset="/assets/images/home/desktop/image-hero.jpg"
-          media="(min-width:1200px)"
+          media="(min-width:1280px)"
         />
         <source
           srcset="/assets/images/home/tablet/image-header.jpg"
@@ -16,7 +16,7 @@ import ButtonOne from "./buttons/ButtonOne.vue";
         <img src="/assets/images/home/mobile/image-header.jpg" alt="" />
       </picture>
       <div
-        class="max-w-[255px] mx-auto absolute text-center inset-0 flex flex-col items-center justify-end mb-[30%] sm:max-w-[379px] md:mb-[22%] lg:max-w-[1110px] lg:max-auto lg:mb-0 lg:justify-center lg:items-start lg:text-left"
+        class="max-w-[255px] mx-auto absolute text-center inset-0 flex flex-col items-center justify-end mb-[30%] sm:max-w-[379px] md:mb-[22%] xl:max-w-[1110px] xl:max-auto xl:mb-0 xl:justify-center xl:items-start xl:text-left"
       >
         <h1 class="uppercase">
           <span
@@ -30,7 +30,7 @@ import ButtonOne from "./buttons/ButtonOne.vue";
           >
         </h1>
         <p
-          class="text-[#fff] opacity-75 text-[15px] leading-[25px] mb-[28px] sm:w-[349px] lg:mb-10"
+          class="text-[#fff] opacity-75 text-[15px] leading-[25px] mb-[28px] sm:w-[349px] xl:mb-10"
         >
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
@@ -38,7 +38,7 @@ import ButtonOne from "./buttons/ButtonOne.vue";
         <ButtonOne
           button-text="See Product"
           button-url="#"
-          class="btn--primary mx-auto lg:mx-0"
+          class="btn--primary mx-auto xl:mx-0"
         />
       </div>
     </div>

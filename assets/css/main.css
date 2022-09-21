@@ -22,4 +22,7 @@
   .btn--outline {
     @apply text-black bg-transparent border border-black hover:bg-black hover:text-white;
   }
+  .container {
+    @apply mx-auto px-6 md:px-10 xl:max-w-[1110px] xl:px-0;
+  }
 }
