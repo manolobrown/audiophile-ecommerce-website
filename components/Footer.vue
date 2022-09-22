@@ -2,19 +2,19 @@
 const footerLinks = [
   {
     text: "Home",
-    url: "",
+    url: "/",
   },
   {
     text: "Headphones",
-    url: "",
+    url: "/headphones",
   },
   {
     text: "Speakers",
-    url: "",
+    url: "/speakers",
   },
   {
     text: "Earphones",
-    url: "",
+    url: "/earphones",
   },
 ];
 </script>
@@ -86,10 +86,11 @@ const footerLinks = [
           class="flex flex-col items-center justify-center gap-y-4 mb-[48px] md:flex-row md:gap-x-[34px] md:justify-start md:mb-8"
         >
           <li v-for="footerLink in footerLinks">
-            <a
+            <NuxtLink
               class="text-white uppercase font-bold text-[13px] leading-[25px] tracking-[2px] transition-colors hover:text-[#D87D4A]"
-              :href="footerLink.url"
-              >{{ footerLink.text }}</a
+              :to="footerLink.url"
+              >{{ footerLink.text }}</NuxtLink
+            >
             >
           </li>
         </ul>

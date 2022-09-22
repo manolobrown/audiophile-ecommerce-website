@@ -11,7 +11,7 @@ const navCards = [
     heading: "Headphones",
     cta: {
       text: "Shop",
-      url: "#",
+      url: "/headphones",
     },
   },
   {
@@ -20,7 +20,7 @@ const navCards = [
     heading: "Speakers",
     cta: {
       text: "Shop",
-      url: "#",
+      url: "/speakers",
     },
   },
   {
@@ -29,7 +29,7 @@ const navCards = [
     heading: "Earphones",
     cta: {
       text: "Shop",
-      url: "#",
+      url: "/earphones",
     },
   },
 ];

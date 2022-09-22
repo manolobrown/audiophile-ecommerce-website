@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+definePageMeta({
+  title: "Home",
+});
+</script>
 <template>
   <div>
     <Hero class="sm:mb-[64px]" />

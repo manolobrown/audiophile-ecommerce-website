@@ -5,7 +5,7 @@ defineProps({
 });
 </script>
 <template>
-  <a :href="buttonUrl" class="btn"
+  <NuxtLink :to="buttonUrl" class="btn"
     ><strong>{{ buttonText }}</strong>
-  </a>
+  </NuxtLink>
 </template>
