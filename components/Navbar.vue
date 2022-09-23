@@ -31,7 +31,7 @@ const isHome = computed(() => {
 <template>
   <div class="navbar-wrapper z-10 relative" :class="isHome">
     <div
-      class="navbar container relative flex flex-row items-center justify-between pt-[32px] pb-[32px] after:block after:h-[1px] after:absolute after:bottom-0 after:left-0 after:right-0 after:bg-white after:opacity-10 after:mx-auto md:after:right-10 md:after:left-10 xl:after:left-0 xl:after:right-0"
+      class="navbar container relative flex flex-row items-center justify-between pt-[32px] pb-[32px] after:block after:h-[1px] after:absolute after:bottom-0 after:left-0 after:right-0 after:bg-white after:opacity-20 after:mx-auto md:after:right-10 md:after:left-10 xl:after:left-0 xl:after:right-0"
     >
       <NavbarMobileButton @click="toggleMobileMenu()" class="xl:hidden" />
       <div class="navbar__logo md:mr-auto md:ml-11 xl:mx-0">

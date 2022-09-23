@@ -8,11 +8,14 @@ defineProps({
 </script>
 <template>
   <div
-    class="card bg-[#F1F1F1] rounded-lg text-center p-[27px] pt-[60px] relative flex-grow lg:min-h-[204px] lg:flex lg:flex-col lg:justify-end text-[#787878] hover:text-[#D87D4A] transition-colors"
+    class="card bg-[#F1F1F1] rounded-lg text-center relative h-[165px] lg:h-[204px] text-[#787878] hover:text-[#D87D4A] transition-colors"
   >
-    <NuxtLink :to="ctaUrl">
+    <NuxtLink
+      :to="ctaUrl"
+      class="p-[22px] flex flex-col justify-end flex-grow h-full"
+    >
       <img
-        class="mx-auto absolute -top-[20%] left-1/2 -translate-x-1/2 max-h-[104px] lg:max-h-[160px] lg:-top-[30%]"
+        class="mx-auto absolute -top-[22%] left-1/2 -translate-x-1/2 max-h-[104px] lg:max-h-[160px] lg:-top-[30%]"
         :src="imagePath"
       />
       <h2 class="mt-5 mb-4 uppercase text-[15px] lg:text-[18px] text-black">
