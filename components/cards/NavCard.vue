@@ -8,7 +8,7 @@ defineProps({
 </script>
 <template>
   <div
-    class="card bg-[#F1F1F1] rounded-lg text-center relative h-[165px] lg:h-[204px] text-[#787878] hover:text-[#D87D4A] transition-colors"
+    class="card bg-[#F1F1F1] rounded-lg text-center relative h-[165px] lg:h-[204px] text-[#787878] hover:text-[#D87D4A] transition-colors flex-grow"
   >
     <NuxtLink
       :to="ctaUrl"
