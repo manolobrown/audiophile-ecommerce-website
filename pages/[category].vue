@@ -1,11 +1,12 @@
 <script setup>
-import data from "~/assets/data.json";
 const route = useRoute();
 const categoryRoute = route.params.category;
-const products = data.filter((product) => {
-  return product.category === categoryRoute && product;
+const { data: products } = await useFetch(() => `/api/${categoryRoute}`, {
+  key: categoryRoute,
+  onResponse({ request, response, options }) {
+    return response._data.sort((a, b) => b.id - a.id);
+  },
 });
-products.sort((a, b) => b.id - a.id);
 </script>
 <template>
   <div>
@@ -65,6 +66,7 @@ products.sort((a, b) => b.id - a.id);
         </div>
       </div>
     </div>
+
     <NavsCategoryNav class="mb-[120px]" />
   </div>
 </template>

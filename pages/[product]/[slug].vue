@@ -2,9 +2,10 @@
 import data from "~/assets/data.json";
 const route = useRoute();
 const router = useRouter();
-const productSlug = route.params.slug;
-const singleProduct = data.find((product) => product.slug === productSlug);
-const gallery = Object.values(singleProduct.gallery);
+const slug = route.params.slug;
+//const { data: product } = await useFetch(() => `/api/${slug}`);
+const product = data.find((product) => product.slug === slug);
+const gallery = Object.values(product.gallery);
 const goBack = () => {
   router.back();
 };
@@ -18,6 +19,7 @@ const goBack = () => {
       >
         Go Back
       </div>
+
       <div class="text-left mb-[120px]">
         <!-- product card -->
         <div
@@ -26,23 +28,19 @@ const goBack = () => {
           <div class="">
             <picture>
               <source
-                :srcset="singleProduct.image.desktop"
+                :srcset="product.image.desktop"
                 media="(min-width:1280px)"
               />
               <source
-                :srcset="singleProduct.image.tablet"
+                :srcset="product.image.tablet"
                 media="(min-width:768px)"
               />
-              <img
-                class="rounded-lg"
-                :src="singleProduct.image.mobile"
-                alt=""
-              />
+              <img class="rounded-lg" :src="product.image.mobile" alt="" />
             </picture>
           </div>
           <div class="">
             <div
-              v-if="singleProduct.new"
+              v-if="product.new"
               class="uppercase text-[#D87D4A] text-[14px] tracking-[10px] mb-6 md:text-[12px] md:tracking-[8.57px]"
             >
               New Product
@@ -50,21 +48,21 @@ const goBack = () => {
             <h2
               class="uppercase font-bold text-[28px] tracking-[1px] mb-6 md:mb-8 md:leading-8 xl:text-[40px] xl:leading-[44px] xl:tracking-[1.43px]"
             >
-              {{ singleProduct.name }}
+              {{ product.name }}
             </h2>
             <p
               class="font-medium text-black text-[15px] leading-[25px] opacity-50 mb-6 md:mb-8"
             >
-              {{ singleProduct.description }}
+              {{ product.description }}
             </p>
             <div
               class="font-bold text-[18px] tracking-[1.29px] mb-8 xl:mb-[47px]"
             >
-              $ {{ parseInt(singleProduct.price).toLocaleString("en-US") }}
+              $ {{ parseInt(product.price).toLocaleString("en-US") }}
             </div>
             <ButtonsButtonOne
               button-text="Add To Cart"
-              :button-url="`/${singleProduct.category}/${singleProduct.slug}`"
+              :button-url="`/${product.category}/${product.slug}`"
               class="btn--primary"
             />
           </div>
@@ -82,7 +80,7 @@ const goBack = () => {
             >
               Features
             </h3>
-            <div class="opacity-50">{{ singleProduct.features }}</div>
+            <div class="opacity-50">{{ product.features }}</div>
           </div>
           <!-- in the box -->
           <div
@@ -94,10 +92,7 @@ const goBack = () => {
               In The Box
             </h3>
             <ul class="text-[15px] leading-[25px] flex flex-col gap-y-2">
-              <li
-                class="flex gap-x-6"
-                v-for="include in singleProduct.includes"
-              >
+              <li class="flex gap-x-6" v-for="include in product.includes">
                 <span class="text-[#D87D4A] font-bold"
                   >{{ include.quantity }}X</span
                 >
@@ -129,7 +124,7 @@ const goBack = () => {
         <div
           class="flex gap-y-14 flex-col md:flex-row gap-x-[11px] xl:gap-x-[30px] mb-[88px] md:mb-[120px] xl:mb-160px"
         >
-          <div v-for="related in singleProduct.others">
+          <div v-for="related in product.others">
             <picture>
               <source
                 :srcset="related.image.desktop"
