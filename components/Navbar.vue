@@ -20,7 +20,7 @@ const navLinks = [
   },
   {
     text: "Earphones",
-    url: "earphones",
+    url: "/earphones",
   },
 ];
 const route = useRoute();

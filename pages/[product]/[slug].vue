@@ -3,9 +3,11 @@ import data from "~/assets/data.json";
 const route = useRoute();
 const router = useRouter();
 const slug = route.params.slug;
-//const { data: product } = await useFetch(() => `/api/${slug}`);
-const product = data.find((product) => product.slug === slug);
-const gallery = Object.values(product.gallery);
+const { data: product } = await useFetch(() => `/api/product/${slug}`, {
+  key: slug,
+});
+//const product = data.find((product) => product.slug === slug);
+//const gallery = Object.values(product.gallery);
 const goBack = () => {
   router.back();
 };
@@ -108,7 +110,7 @@ const goBack = () => {
         >
           <picture
             class="md:last:row-span-2 md:last:col-start-2 md:last:row-start-1 md:col-start-1"
-            v-for="image in gallery"
+            v-for="image in product.gallery"
           >
             <source :srcset="image.desktop" media="(min-width:1280px)" />
             <source :srcset="image.tablet" media="(min-width:768px)" />
