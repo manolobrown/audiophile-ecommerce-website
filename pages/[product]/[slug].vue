@@ -1,13 +1,10 @@
 <script setup>
-import data from "~/assets/data.json";
 const route = useRoute();
 const router = useRouter();
 const slug = route.params.slug;
 const { data: product } = await useFetch(() => `/api/product/${slug}`, {
   key: slug,
 });
-//const product = data.find((product) => product.slug === slug);
-//const gallery = Object.values(product.gallery);
 const goBack = () => {
   router.back();
 };
@@ -16,7 +13,7 @@ const goBack = () => {
   <div>
     <div class="container">
       <div
-        class="text-[15px] leading-[25px] text-black opacity-50 py-6 font-medium xl:pt-[79px] xl:pb-[56px]"
+        class="text-[15px] leading-[25px] text-black opacity-50 py-6 font-medium xl:pt-[79px] xl:pb-[56px] cursor-pointer"
         @click="goBack()"
       >
         Go Back

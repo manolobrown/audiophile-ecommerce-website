@@ -17,10 +17,16 @@ const footerLinks = [
     url: "/earphones",
   },
 ];
+const route = useRoute();
+
+const displayFooter = computed(() => {
+  return route.name === "checkout" ? false : true;
+});
 </script>
 <template>
   <!-- new card -->
   <div
+    v-if="displayFooter"
     class="container text-center mb-[120px] xl:flex xl:flex-row-reverse xl:items-center xl:justify-between xl:mb-[200px]"
   >
     <div class="mb-[40px]">
