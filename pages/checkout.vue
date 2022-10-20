@@ -28,7 +28,7 @@ const products = [
   <div class="bg-[#F2F2F2] pb-[97px]">
     <div class="container">
       <div
-        class="text-[15px] leading-[25px] text-black opacity-50 py-6 font-medium xl:pt-[79px] xl:pb-[56px] cursor-pointer"
+        class="inline-block text-[15px] leading-[25px] text-black opacity-50 py-6 font-medium xl:pt-[79px] xl:pb-[56px] cursor-pointer hover:text-[#D87D4A] hover:opacity-100 transition-all"
         @click="goBack()"
       >
         Go Back
@@ -39,18 +39,19 @@ const products = [
         :actions="false"
         :config="{
           classes: {
+            form: 'xl:flex xl:gap-x-[30px]',
             label:
               'text-black font-bold text-[12px] mb-[9px] tracking-[-0.21px] block',
             legend:
               'text-black font-bold text-[12px] mb-[9px] tracking-[-0.21px] block',
             input:
-              'border border-[#CFCFCF] rounded-lg flex items-center h-14 px-6 text-[14px] tracking-[-0.25px] text-[#000028] font-bold max-w-full w-full mb-[25px]',
+              'border border-[#CFCFCF] rounded-lg flex items-center h-14 px-6 text-[14px] tracking-[-0.25px] text-[#000028] font-bold max-w-full w-full mb-[25px] cursor-pointer hover:border-[#D87D4A] focus:border-[#D87D4A] transition-colors',
           },
         }"
       >
-        <div class="bg-white rounded-lg p-6 mb-8">
+        <div class="bg-white rounded-lg p-6 mb-8 xl:flex-grow xl:mb-0">
           <h1
-            class="text-black uppercase text-lg font-bold tracking-[1px] mb-8"
+            class="text-black uppercase text-lg font-bold tracking-[1px] mb-8 md:text-[32px] md:leading-[36px] md:tracking-[1.14px]"
           >
             Checkout
           </h1>
@@ -60,30 +61,31 @@ const products = [
           >
             Billing Details
           </h2>
+          <div class="md:grid md:grid-cols-2 md:gap-x-4">
+            <FormKit
+              type="text"
+              name="name"
+              label="Name"
+              placeholder="Jane Doe"
+              validation="required"
+            />
 
-          <FormKit
-            type="text"
-            name="name"
-            label="Name"
-            placeholder="Jane Doe"
-            validation="required"
-          />
+            <FormKit
+              type="email"
+              name="email"
+              label="Email Address"
+              placeholder="jane@doe.com"
+              validation="required"
+            />
 
-          <FormKit
-            type="email"
-            name="email"
-            label="Email Address"
-            placeholder="jane@doe.com"
-            validation="required"
-          />
-
-          <FormKit
-            type="tel"
-            name="phone"
-            label="Phone Number"
-            placeholder="+1 111-222-3333"
-            validation="required"
-          />
+            <FormKit
+              type="tel"
+              name="phone"
+              label="Phone Number"
+              placeholder="+1 111-222-3333"
+              validation="required"
+            />
+          </div>
 
           <h2
             class="uppercase text-[#D87D4A] text-[13px] leading-[25px] tracking-[0.93px] font-bold mb-4"
@@ -99,29 +101,31 @@ const products = [
             validation="required"
           />
 
-          <FormKit
-            type="text"
-            name="zip"
-            label="ZIP Code"
-            placeholder="00000"
-            validation="required"
-          />
+          <div class="md:grid md:grid-cols-2 md:gap-x-4">
+            <FormKit
+              type="text"
+              name="zip"
+              label="ZIP Code"
+              placeholder="00000"
+              validation="required"
+            />
 
-          <FormKit
-            type="text"
-            name="city"
-            label="City"
-            placeholder="New York"
-            validation="required"
-          />
+            <FormKit
+              type="text"
+              name="city"
+              label="City"
+              placeholder="New York"
+              validation="required"
+            />
 
-          <FormKit
-            type="text"
-            name="country"
-            label="Country"
-            placeholder="United States"
-            validation="required"
-          />
+            <FormKit
+              type="text"
+              name="country"
+              label="Country"
+              placeholder="United States"
+              validation="required"
+            />
+          </div>
 
           <h2
             class="uppercase text-[#D87D4A] text-[13px] leading-[25px] tracking-[0.93px] font-bold mb-4"
@@ -139,35 +143,41 @@ const products = [
             }"
             :config="{
               classes: {
+                fieldset: 'md:grid md:grid-cols-2 md:gap-x-4',
                 legend:
-                  'text-black font-bold text-[12px] mb-[9px] tracking-[-0.21px] block',
+                  'text-black font-bold text-[12px] mb-[9px] tracking-[-0.21px] block md:contents',
                 label: 'text-black font-bold text-[14px] tracking-[-0.25px]',
                 wrapper:
-                  'flex items-center gap-x-4 border border-[#CFCFCF] rounded-lg h-14 px-6 max-w-full w-full mb-4',
+                  'flex items-center gap-x-4 border border-[#CFCFCF] rounded-lg h-14 px-6 max-w-full w-full mb-4 cursor-pointer hover:border-[#D87D4A] focus:border-[#D87D4A] transition-colors peer-checked:border-[#D87D4A]',
                 outer: 'mb-2',
+                input: 'peer',
               },
             }"
             validation="required"
           />
 
-          <FormKit
-            type="text"
-            name="eMoney"
-            label="e-Money Number"
-            placeholder="XXXXXXXXX"
-            validation="required"
-          />
+          <div class="md:grid md:grid-cols-2 md:gap-x-4">
+            <FormKit
+              type="text"
+              name="eMoney"
+              label="e-Money Number"
+              placeholder="XXXXXXXXX"
+              validation="required"
+            />
 
-          <FormKit
-            type="text"
-            name="emoneyPin"
-            label="e-Money Pin"
-            placeholder="XXXX"
-            validation="required"
-          />
+            <FormKit
+              type="text"
+              name="emoneyPin"
+              label="e-Money Pin"
+              placeholder="XXXX"
+              validation="required"
+            />
+          </div>
         </div>
 
-        <div class="bg-white rounded-lg p-6">
+        <div
+          class="bg-white rounded-lg p-6 xl:flex-grow xl:max-w-[350px] xl:h-fit"
+        >
           <h2
             class="text-black uppercase text-lg font-bold tracking-[1px] mb-8"
           >
